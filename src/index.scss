@@ -6,13 +6,23 @@
 body {
   font-family: 'Montserrat', sans-serif;
 }
+.App {
+  max-width: 1000px;
+  margin: 50px auto;
+}
 .component {
   margin-block-end: 50px;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
 }
 
 .id-card,
 .greetings,
-.box-color {
+.box-color,
+.grid,
+.rating {
   display: flex;
   gap: 0.5rem;
   padding: 0.5rem;
@@ -37,4 +47,50 @@ body {
   &:last-of-type {
     margin-top: 10px;
   }
+}
+.grid {
+  display: grid;
+  justify-content: space-around;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 270px));
+}
+
+.credit-card {
+  min-height: 140px;
+  border-radius: 4px;
+  padding: 1rem;
+  line-height: 1.2;
+
+  img {
+    max-width: 50px;
+  }
+  .card-logo {
+    text-align: right;
+  }
+  .card-number {
+    text-align: center;
+    font-size: 1.5rem;
+
+    &:before {
+      display: inline-block;
+      content: '.... .... ....';
+      font-size: 3rem;
+      margin-right: 1rem;
+    }
+  }
+  .date-bank {
+    margin-block-start: 0.5rem;
+    margin-block-end: 0.25rem;
+    display: flex;
+    font-size: 0.8rem;
+    gap: 1rem;
+  }
+  .card-owner {
+    font-size: 0.8rem;
+  }
+}
+.rating {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
 }

@@ -1,9 +1,14 @@
-const Random = (props) => {
+const Random = ({ min, max }) => {
+
+  const random = Math.floor(
+    Math.random() * (max - min) + min
+  );
+
   return (
     <div className="id-card">
-      <span>
-        Random value between 1 and 6: {props.min} {props.max}
-      </span>
+      <div>
+        {`Random value between ${min} and ${max} => ${random}`}
+      </div>
     </div>
   );
 };
