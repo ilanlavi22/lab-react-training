@@ -122,18 +122,32 @@ body {
       font-size: 0.7rem;
     }
   }
+  .rating {
+    display: block;
+    padding: 0;
+    border: none;
+  }
+  .rating + span {
+    font-size: 0.7rem;
+  }
 }
-.like-button {
+.like-buttons {
   display: flex;
   justify-content: center;
-  button {
-    -webkit-appearance: none;
-    border: none;
-    border-radius: 4px;
-    padding: 1rem 4rem;
-    background: #9faee4;
-    color: #fff;
-    font-size: 1.2rem;
-    cursor: pointer;
+  gap: 1rem;
+
+  .like-button {
+    display: flex;
+    justify-content: center;
+    button {
+      -webkit-appearance: none;
+      border: none;
+      border-radius: 4px;
+      padding: 1rem 4rem;
+      background: #9faee4;
+      color: #fff;
+      font-size: 1.2rem;
+      cursor: pointer;
+    }
   }
 }

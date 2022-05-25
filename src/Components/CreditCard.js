@@ -3,7 +3,8 @@ import visaCardLogo from '../assets/images/visa.png'
 
 const CreditCard = (props) => {
   const { type, number, expirationMonth, expirationYear, bank, owner, bgColor, color } = props
-  let cardLogo = type === 'Visa' ? visaCardLogo : masterCardLogo
+  let cardLogo = type === 'Visa' ? visaCardLogo : masterCardLogo;
+  const formatedExpirationMonth = expirationMonth < 10 ? `0${expirationMonth}` : expirationMonth;
 
   return (
     <div
@@ -16,7 +17,7 @@ const CreditCard = (props) => {
       <div className="card-number">{number.toString().slice(-4)}</div>
       <div className="date-bank">
         <span>
-          {`Expires ${expirationMonth}/${expirationYear.toString().slice(-2)}`}
+          {`Expires ${formatedExpirationMonth}/${expirationYear.toString().slice(-2)}`}
         </span>
         <span>{bank}</span>
       </div>
